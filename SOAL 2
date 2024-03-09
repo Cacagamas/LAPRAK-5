@@ -1,1 +1,23 @@
+def ganjil(bawah, atas):
+    deret_ganjil = []
+    if bawah < atas:
+        for i in range(bawah, atas + 1):
+            if i % 2 != 0:
+                deret_ganjil.append(i)
+    else:
+        for i in range(bawah, atas - 1, -1):
+            if i % 2 != 0:
+                deret_ganjil.append(i)
+    return deret_ganjil
+
+# Contoh penggunaan fungsi ganjil
+bawah = 10
+atas = 30
+hasil_ganjil = ganjil(bawah, atas)
+print(f"bawah = {bawah}, atas = {atas}. Karena bawah < atas, berarti dari kecil ke besar, maka hasilnya adalah: {', '.join(map(str, hasil_ganjil))}.")
+
+bawah = 97
+atas = 82
+hasil_ganjil = ganjil(bawah, atas)
+print(f"bawah = {bawah}, atas = {atas}. Karena bawah > atas, berarti dari besar ke kecil, maka hasilnya adalah: {', '.join(map(str, hasil_ganjil))}.")
 
